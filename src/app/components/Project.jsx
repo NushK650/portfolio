@@ -19,7 +19,7 @@ function Projects() {
             <p className=' font-bold text-center text-slate-500'>Weather App </p>
           <img className='h-full aspect-video mt-2' src="./WeatherApp.png" alt="Weather App" /></div>
           </a>
-          <a href="https://kumar-tp-pokemon-api-challenge.vercel.app/">
+          <a href="https://kumartc-pokemon-rebuild.vercel.app/">
           <div className="bg-gray-100 rounded-lg shadow-md p-6 hover:scale-105 hover:border-2 hover:border-blue-400"> 
             <p className=' font-bold text-center text-slate-500'>Pokemon App</p>
           <img className='h-full aspect-video mt-2' src="./PokemonApp.png" alt="Pokemon App" /></div>
