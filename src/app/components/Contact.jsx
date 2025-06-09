@@ -8,9 +8,8 @@ const Contact = () => {
         Contact Me
       </h2>
       <p className="text-lg text-gray-700 mb-8">
-        Feel free to reach out! You can contact me via my email: <a href="">TanushKumar650@gmail.com</a>
-       , number: 650-218-4892 or through the links
-        bellow.
+        Feel free to reach out! You can contact me via  <br /> Email: TanushKumar650@gmail.com
+       <br /> Number: 650-218-4892 
       </p>
       <div className="flex justify-center gap-10">
         <a href="https://github.com/NushK650">
