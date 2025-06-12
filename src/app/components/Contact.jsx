@@ -11,12 +11,12 @@ const Contact = () => {
         Feel free to reach out! You can contact me via  <br /> Email: TanushKumar650@gmail.com
        <br /> Number: 650-218-4892 
       </p>
-      <div className="flex justify-center gap-10">
+      <div className="flex justify-center gap-10 ">
         <a href="https://github.com/NushK650">
           <img src="./github.png" alt="github" />
         </a>
         <a href="https://www.linkedin.com/in/tanush-kumar-aab68135b/details/skills/">
-          <img src="./linkedin.png" alt="linkedin" />
+          <img src="./linkedin.png"  alt="linkedin" />
         </a>
         <a href="./ResumeV4.pdf">
           <img src="./resume.png" alt="resume" />

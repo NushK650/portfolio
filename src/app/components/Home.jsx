@@ -4,7 +4,7 @@ import React from "react";
 function Home() {
   return (
    
-      <div className=" mt-11 py-20 h-full text-center bg-[url('/hero.png')]">
+      <div className=" mt-11 py-20 h-full text-center bg-cover bg-no-repeat bg-[url('/hero.png')]">
         <div className="container mx-auto">
           <h1 className="text-4xl font-bold text-slate-700 mb-4">
             Hi, I'm Tanush Kumar

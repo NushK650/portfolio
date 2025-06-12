@@ -10,11 +10,11 @@ function Header() {
       </div>
 
       <nav>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-4 ">
           
-          <li><a href="#about" className="hover:text-blue-600">About</a></li>
-          <li><a href="#project" className="hover:text-blue-600">Projects</a></li>
-          <li><a href="#contact" className="hover:text-blue-600">Contact</a></li>
+          <li><a href="#about" className="hover:text-blue-600 text-lg font-medium hover:transition-all hover:text-xl  hover:duration-500">About</a></li>
+          <li><a href="#project" className="hover:text-blue-600 text-lg hover:transition-all hover:text-xl hover:duration-300 ">Projects</a></li>
+          <li><a href="#contact" className="hover:text-blue-600 text-lg hover:transition-all hover:text-xl hover:duration-300">Contact</a></li>
         </ul>
       </nav>
     </div>
