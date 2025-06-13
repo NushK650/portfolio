@@ -17,7 +17,7 @@ function Projects() {
             </div>
           </a>
           <a href="https://kumartc-weather-app-twux.vercel.app/">
-          <div className="bg-gray-100 rounded-lg shadow-md p-6  border-2hover:scale-105 hover:border-2  hover:border-blue-400 hover:transition-transform hover:duration-800"> 
+          <div className="bg-gray-100 rounded-lg shadow-md p-6  border-2 hover:scale-105 hover:border-2  hover:border-blue-400 hover:transition-transform hover:duration-800"> 
             <p className=' font-bold text-center text-slate-500'>Weather App </p>
           <img className='h-full aspect-video mt-2' src="./WeatherApp.png" alt="Weather App" />
           <p className='text-gray-500 mt-5 font-bold'>Description</p>
@@ -25,7 +25,7 @@ function Projects() {
           </div>
           </a>
           <a href="https://kumartc-pokemon-rebuild.vercel.app/">
-          <div className="bg-gray-100 rounded-lg shadow-md p-6  border-2hover:scale-105 hover:border-2  hover:border-blue-400 hover:transition-transform hover:duration-800"> 
+          <div className="bg-gray-100 rounded-lg shadow-md p-6  border-2 hover:scale-105 hover:border-2  hover:border-blue-400 hover:transition-transform hover:duration-800"> 
             <p className=' font-bold text-center text-slate-500'>Pokemon App</p>
           <img className='h-full aspect-video mt-2' src="./PokemonApp.png" alt="Pokemon App" />
           <p className='text-gray-500 mt-5 font-bold'>Description</p>
