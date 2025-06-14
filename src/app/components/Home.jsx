@@ -14,7 +14,7 @@ function Home() {
     });
 
     
-    const clearDelay = firstMessage.length * 100 + 500;
+    const clearDelay = firstMessage.length * 200 + 500;
     setTimeout(() => {
       setGreeting('');
     }, clearDelay);
@@ -29,9 +29,9 @@ function Home() {
   }, []);
 
   return (
-    <div className="mt-11 py-20 h-full text-center bg-cover bg-no-repeat bg-[url('/hero.png')]">
+    <div className="mt-11 py-20 h-full text-center bg-cover bg-no-repeat dark:bg-[url('/DarkHero.png')] bg-[url('/hero.png')]">
       <div className="container mx-auto">
-        <h1 className="text-4xl font-bold text-slate-700 mb-4">{greeting}</h1>
+        <h1 className="text-4xl font-bold dark:text-white text-slate-700 mb-4">{greeting}</h1>
         <p className="text-lg text-slate-500 mb-8">I'm a passionate Web Developer.</p>
         <button>
           <a

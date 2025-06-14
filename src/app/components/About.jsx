@@ -23,10 +23,10 @@ function About() {
   const repeatedSkills = [...skills, ...skills]; // duplicate for seamless loop
 
   return (
-    <section id="about" className="py-16 bg-gray-50">
+    <section className="py-16 bg-gray-50 dark:bg-slate-900">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold text-gray-800 mb-6">About Me</h2>
-        <p className="text-lg text-gray-700">
+        <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-6">About Me</h2>
+        <p className="text-lg text-gray-700 dark:text-white">
           Hi, I'm Tanush Kumar, a web developer with a particular passion for
           front-end development. There's something truly rewarding about seeing
           the direct impact of my work come to life on the screen. I thrive on
@@ -39,8 +39,8 @@ function About() {
         </p>
 
         <h2
-          id="skills"
-          className="text-3xl font-semibold text-gray-800 mb-6 mt-12"
+          
+          className="text-3xl font-semibold text-gray-800 dark:text-white mb-6 mt-12"
         >
           Skills
         </h2>
@@ -59,9 +59,9 @@ function About() {
                 <img
                   src={skill.image}
                   alt={skill.name}
-                  className="w-16 h-16 object-contain"
+                  className="w-17 h-17 object-contain bg-gray-50 rounded-2xl p-1"
                 />
-                <h3 className="text-center text-slate-500 font-semibold mt-2">
+                <h3 className="text-center text-slate-500 dark:text-white font-semibold mt-2">
                   {skill.name}
                 </h3>
               </div>
