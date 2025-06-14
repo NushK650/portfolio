@@ -24,13 +24,13 @@ const projects = [
 
 function Projects() {
   return (
-    <section className="py-16 bg-white dark:bg-slate-800">
+    <section className="py-16 bg-white dark:bg-neutral-800">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold dark:text-white text-gray-800 mb-8 text-center">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <a key={index} href={project.link} target="" rel="">
-              <div className="bg-gray-100 dark:bg-slate-600 dark:border-slate-600 border-gray-100 dark:shadow-xl rounded-lg shadow-md p-6 border-2 hover:scale-105 hover:border-blue-400 hover:transition-transform hover:duration-800">
+              <div className="bg-gray-100 dark:bg-neutral-600 dark:border-neutral-600 border-gray-100 dark:shadow-xl rounded-lg shadow-md p-6 border-2 hover:scale-105 hover:border-blue-400 hover:transition-transform hover:duration-800">
                 <p className="font-bold text-center text-slate-500 dark:text-white">{project.title}</p>
                 <img className="h-full aspect-video mt-2" src={project.image} alt={project.title} />
                 <p className="text-gray-500 dark:text-white mt-5 font-bold">Description</p>

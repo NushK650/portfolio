@@ -23,7 +23,7 @@ function About() {
   const repeatedSkills = [...skills, ...skills]; // duplicate for seamless loop
 
   return (
-    <section className="py-16 bg-gray-50 dark:bg-slate-900">
+    <section className="py-16 bg-gray-50 dark:bg-neutral-900">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-semibold text-gray-800 dark:text-white mb-6">About Me</h2>
         <p className="text-lg text-gray-700 dark:text-white">
