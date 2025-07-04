@@ -17,6 +17,7 @@ const skills = [
   { name: "JSON", image: "Json.png" },
   { name: "Tailwind", image: "./TailWind.png" },
   { name: "BootStrap", image: "./bootstrap.png" },
+  {name:"Python", image:"icons8-python.svg"},
 ];
 
 function About() {
