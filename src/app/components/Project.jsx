@@ -26,7 +26,7 @@ function Projects() {
   return (
     <section className="py-16 bg-white dark:bg-neutral-800">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-semibold dark:text-white text-gray-800 mb-8 text-center">My Projects</h2>
+        <h2 id='project' className="text-3xl font-semibold dark:text-white text-gray-800 mb-8 text-center">My Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project, index) => (
             <a key={index} href={project.link} target="" rel="">
