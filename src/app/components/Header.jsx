@@ -4,7 +4,7 @@ import React from 'react';
 function Header() {
   return (
     
-    <div className="bg-white dark:bg-neutral-800 dark:text-white shadow py-4 px-6 fixed top-0 left-0 right-0 z-50 bg- items-center flex justify-between text-slate-500">
+    <div className="bg-white/85 dark:bg-neutral-800/85 dark:text-white shadow py-4 px-6 fixed top-0 left-0 right-0 z-50 bg- items-center flex justify-between text-slate-500">
       <div className="font-bold text-xl">
         <p>Tanush R. Kumar</p>
       </div>
