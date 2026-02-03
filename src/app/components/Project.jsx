@@ -1,39 +1,80 @@
 'use client';
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const projects = [
-  
   {
-    title: 'Pokemon App',
-    image: './PokemonApp.png',
+    title: 'Pokemon Rebuild',
     link: 'https://kumartc-pokemon-rebuild.vercel.app/',
-    description: `I was assigned the task of modernizing a static website originally built using vanilla HTML, CSS, and basic JavaScript. The goal was to enhance scalability, maintainability, and performance by rebuilding the entire site from scratch using Next.js, a powerful React-based framework.`,
+    description:
+      'Modernized a static Pokémon site with Next.js, emphasizing scalable structure, faster performance, and a refreshed UI.',
+    tags: ['Next.js', 'UI Rebuild', 'Performance'],
   },
   {
-    title: 'Weather App',
-    image: './WeatherApp.png',
+    title: 'Weather Experience',
     link: 'https://kumartc-weather-app-twux.vercel.app/',
-    description: `Similar to my earlier Pokémon Rebuild project—I was tasked with rebuilding a previously developed weather application originally written in vanilla HTML, CSS, and JavaScript. The goal was to reimplement the project using a modern framework (Next.js), improve user experience, and make the codebase scalable and maintainable.`,
+    description:
+      'Rebuilt a weather app with a modern front-end stack, improving the UX with clearer data hierarchy and responsive layouts.',
+    tags: ['Next.js', 'Responsive', 'API UX'],
   },
 ];
 
 function Projects() {
   return (
-    <section className="py-16 bg-white dark:bg-neutral-800">
-      <div className="container mx-auto px-6">
-        <h2 id='project' className="text-3xl font-semibold dark:text-white text-gray-800 mb-8 text-center">My Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+    <section id="project" className="py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="flex flex-col items-center text-center">
+          <p className="chip mb-4">Selected Work</p>
+          <h2 className="section-title">Projects That Showcase Craft</h2>
+          <p className="mt-4 max-w-2xl text-white/70">
+            A curated set of rebuilds and product-focused experiments that
+            highlight modern tooling, clean layout systems, and care for detail.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <a key={index} href={project.link} target="" rel="">
-              <div className="bg-gray-100/70 dark:bg-neutral-600/70 dark:border-neutral-600/0 border-gray-100/0 dark:shadow-xl rounded-4xl shadow-md p-6 border-5 hover:scale-105 hover:border-blue-400 hover:transition-transform hover:duration-800">
-                <p className="font-bold text-center text-slate-500 dark:text-white">{project.title}</p>
-                <img className="h-full aspect-video mt-2 rounded-3xl" src={project.image} alt={project.title} />
-                <p className="text-gray-500 dark:text-white mt-5 font-bold">Description</p>
-                <p className="text-gray-500 dark:text-white mt-2 font-medium max-h-30 min-h-30 overflow-auto">
+            <motion.a
+              key={project.title}
+              href={project.link}
+              target="_blank"
+              rel="noreferrer"
+              className="group"
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              viewport={{ once: true }}
+            >
+              <div className="glass-panel rounded-4xl p-6 transition group-hover:-translate-y-1">
+                <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
+                  <iframe
+                    src={project.link}
+                    title={project.title}
+                    className="aspect-video w-full"
+                    loading="lazy"
+                  ></iframe>
+                </div>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {project.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-white/15 bg-white/5 px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.25em] text-white/60"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <h3 className="mt-4 text-xl font-semibold text-white">
+                  {project.title}
+                </h3>
+                <p className="mt-3 text-sm text-white/70">
                   {project.description}
                 </p>
+                <p className="mt-6 text-sm font-semibold text-[#f4b259]">
+                  View live project
+                </p>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>

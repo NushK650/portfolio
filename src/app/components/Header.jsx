@@ -1,24 +1,51 @@
 
 import React from 'react';
 
+const options = [
+  { Name: 'Home', href: '#home' },
+  { Name: 'About', href: '#about' },
+  { Name: 'Projects', href: '#project' },
+  { Name: 'Contact', href: '#contact' },
+];
+
 function Header() {
   return (
-    
-    <div className=" bg-white/85 dark:bg-neutral-800/85 backdrop-blur-sm dark:text-white shadow py-4 px-6 fixed top-0 left-0 right-0 z-50 rounded-b-3xl items-center flex justify-between text-slate-500">
-  
-      <div className="font-medium text-xl">
-        <p>Tanush R. Kumar</p>
-      </div>
+    <header className="fixed top-0 left-0 right-0 z-50">
+      <div className="glass-panel mx-auto mt-4 flex max-w-6xl items-center justify-between rounded-3xl px-6 py-4">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-full border border-white/20 bg-white/5"></div>
+          <div>
+            <p className="text-sm uppercase tracking-[0.3em] text-white/50">Portfolio</p>
+            <p className="text-lg font-semibold text-white">Tanush R. Kumar</p>
+          </div>
+        </div>
 
-      <nav>
-        <ul className="flex space-x-4 ">
-          
-          <li><a href="#about" className="hover:text-blue-600 text-lg font-medium hover:transition-all  hover:duration-500">About</a></li>
-          <li><a href="#project" className="hover:text-blue-600 text-lg hover:transition-all  hover:duration-300 ">Projects</a></li>
-          <li><a href="#contact" className="hover:text-blue-600 text-lg hover:transition-all  hover:duration-300">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
+        <nav className="hidden items-center gap-6 md:flex">
+          {options.map((option) => (
+            <a
+              key={option.href}
+              href={option.href}
+              className="text-sm font-semibold uppercase tracking-[0.18em] text-white/70 transition hover:text-white"
+            >
+              {option.Name}
+            </a>
+          ))}
+        </nav>
+
+        <a href="#contact" className="btn-ghost hidden md:inline-flex">
+          Let&apos;s Talk
+        </a>
+      </div>
+      <div className="glass-panel mx-6 rounded-3xl px-6 py-3 md:hidden">
+        <nav className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+          {options.map((option) => (
+            <a key={option.href} href={option.href} className="hover:text-white">
+              {option.Name}
+            </a>
+          ))}
+        </nav>
+      </div>
+    </header>
   );
 }
 

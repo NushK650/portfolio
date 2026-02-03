@@ -1,78 +1,106 @@
-"use client"
+"use client";
+
 import { motion } from "framer-motion";
-import React from "react";
+import { FaHtml5, FaCss3, FaPython, FaBootstrap, FaNode } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io5";
+import { SiTypescript } from "react-icons/si";
+import { RiTailwindCssFill, RiNextjsFill } from "react-icons/ri";
+import { BsFiletypeJson, BsFiletypeSql } from "react-icons/bs";
+import { VscAzure } from "react-icons/vsc";
+import { TbBrandCSharp, TbBrandReactNative } from "react-icons/tb";
+import { FaReact } from "react-icons/fa";
 
 const skills = [
-  { name: "HTML", image: "./Html.png" },
-  { name: "CSS", image: "./Css.png" },
-  { name: "JavaScript", image: "./JavaScript.png" },
-  { name: "TypeScript", image: "./TypeScript.png" },
-  { name: "React", image: "./React.png" },
-  { name: "React Native", image: "./React.png" },
-  { name: "Next.js", image: "./NextJS.png" },
-  { name: "Node.js", image: "NodeJS.png" },
-  { name: "C#", image: "./CSharp.png" },
-  { name: "Azure", image: "./Azure.png" },
-  { name: "SQL", image: "Sql.png" },
-  { name: "JSON", image: "Json.png" },
-  { name: "Tailwind", image: "./TailWind.png" },
-  { name: "BootStrap", image: "./bootstrap.png" },
-  {name:"Python", image:"icons8-python.svg"},
+  { name: "HTML", Icon: FaHtml5 },
+  { name: "CSS", Icon: FaCss3 },
+  { name: "JavaScript", Icon: IoLogoJavascript },
+  { name: "TypeScript", Icon: SiTypescript },
+  { name: "React", Icon: FaReact },
+  { name: "React Native", Icon: TbBrandReactNative },
+  { name: "Next.js", Icon: RiNextjsFill },
+  { name: "Node.js", Icon: FaNode },
+  { name: "C#", Icon: TbBrandCSharp },
+  { name: "Azure", Icon: VscAzure },
+  { name: "SQL", Icon: BsFiletypeSql },
+  { name: "JSON", Icon: BsFiletypeJson },
+  { name: "Tailwind", Icon: RiTailwindCssFill },
+  { name: "Bootstrap", Icon: FaBootstrap },
+  { name: "Python", Icon: FaPython },
 ];
 
-function About() {
-  const repeatedSkills = [...skills, ...skills]; // duplicate for seamless loop
-
+export default function About() {
   return (
-    <section className="py-16 bg-gray-50 dark:bg-neutral-900">
-      <div id='about' className="container mx-auto px-6">
-        <h2   className="text-3xl font-semibold text-gray-800 dark:text-white mb-6">About Me</h2>
-        {/* seperate into sections too much too read  */}
-        <p className="text-lg text-gray-700 dark:text-white w-fit">
-          Hi, I'm Tanush Kumar, a web developer with a particular passion for
-          front-end development. There's something truly rewarding about seeing
-          the direct impact of my work come to life on the screen. I thrive on
-          the challenge of problem-solving and I'm a dedicated lifelong learner,
-          always eager to explore new technologies and approaches. My goal is to
-          build lasting, well-crafted applications that not only function
-          seamlessly but also provide genuine value and help others. I'm deeply
-          interested in creating solutions that are robust, user-friendly, and
-          built to stand the test of time.
-        </p>
+    <section id="about" className="py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+          <div className="glass-panel rounded-4xl p-8 md:p-10">
+            <p className="chip mb-6">About me</p>
+            <h2 className="text-3xl font-semibold text-white md:text-4xl">
+              A builder focused on clarity, polish, and long-term maintainability.
+            </h2>
+            <p className="mt-6 text-white/70">
+              Hi, I&apos;m Tanush Kumar, a web developer with a particular passion
+              for front-end development. I love turning complex problems into
+              elegant interfaces with thoughtful interactions and structure.
+            </p>
+            <p className="mt-4 text-white/70">
+              My goal is to create reliable, user-friendly products that feel
+              calm and intentional while staying scalable and easy to evolve.
+            </p>
+          </div>
 
-        <h2
-          
-          className="text-3xl font-semibold text-gray-800 dark:text-white mb-6 mt-12"
-        >
-          Skills
-        </h2>
-
-        <div className="relative overflow-hidden w-full py-4">
-          <motion.div
-            className="flex gap-6 w-max"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          >
-            {repeatedSkills.map((skill, index) => (
-              <div
-                className="flex flex-col items-center min-w-[100px]"
-                key={index}
-              >
-                <img
-                  src={skill.image}
-                  alt={skill.name}
-                  className="w-17 h-17 object-contain bg-gray-50 rounded-2xl p-1"
-                />
-                <h3 className="text-center text-slate-500 dark:text-white font-semibold mt-2">
-                  {skill.name}
-                </h3>
+          <div className="glass-panel rounded-4xl p-8 md:p-10">
+            <p className="chip mb-6">Approach</p>
+            <div className="space-y-5 text-white/70">
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-4">
+                <p className="text-sm font-semibold text-white">Design for flow</p>
+                <p className="text-sm">
+                  I focus on clarity, hierarchy, and rhythm so each screen feels
+                  calm and intuitive.
+                </p>
               </div>
-            ))}
-          </motion.div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-4">
+                <p className="text-sm font-semibold text-white">Build for scale</p>
+                <p className="text-sm">
+                  Components stay flexible with reusable patterns and clean
+                  architecture.
+                </p>
+              </div>
+              <div className="rounded-3xl border border-white/10 bg-white/5 p-4">
+                <p className="text-sm font-semibold text-white">Ship thoughtfully</p>
+                <p className="text-sm">
+                  I iterate fast while maintaining accessibility, performance,
+                  and polish.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-16">
+          <h3 className="section-title mb-6">Toolkit</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {skills.map((skill, index) => {
+              const Icon = skill.Icon;
+              return (
+                <motion.div
+                  key={skill.name}
+                  className="flex items-center gap-3 rounded-3xl border border-white/10 bg-white/5 px-4 py-4 text-white/80"
+                  initial={{ opacity: 0, y: 12 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.03 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="grid h-11 w-11 place-items-center rounded-2xl border border-white/15 bg-white/5 text-white">
+                    <Icon size={22} />
+                  </div>
+                  <p className="text-sm font-semibold">{skill.name}</p>
+                </motion.div>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
   );
 }
-
-export default About;

@@ -12,7 +12,7 @@ function App() {
 <link rel='icon' href="/Logo.svg" />
 <title>My App Title</title>
 </Head>
-    <div className="app-container">
+    <div className="min-h-screen">
       <Header />
       <main className="main-content">
         <Home/>
