@@ -1,6 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
+import Reveal from './Reveal';
 
 const stats = [
   { label: 'Focus', value: 'Front-End' },
@@ -12,7 +13,8 @@ function Home() {
   return (
     <section id="home" className="pt-32 pb-20">
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-6 lg:grid-cols-[1.2fr_0.8fr]">
-        <div>
+        <Reveal>
+          <div>
           <p className="chip mb-6">Available for internships</p>
           <h1 className="text-4xl font-semibold text-white md:text-6xl">
             Building thoughtful web experiences with a focus on craft.
@@ -30,13 +32,13 @@ function Home() {
             </a>
           </div>
         </div>
+        </Reveal>
 
-        <motion.div
-          className="glass-panel rounded-3xl p-6"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-        >
+        <Reveal delay={0.1}>
+          <motion.div
+            className="glass-panel rounded-3xl p-6"
+            initial={false}
+          >
           <p className="text-sm uppercase tracking-[0.3em] text-white/60">
             Snapshot
           </p>
@@ -56,7 +58,8 @@ function Home() {
               </div>
             ))}
           </div>
-        </motion.div>
+          </motion.div>
+        </Reveal>
       </div>
     </section>
   );

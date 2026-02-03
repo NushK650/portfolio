@@ -1,6 +1,8 @@
 'use client';
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Reveal from './Reveal';
 
 const projects = [
   {
@@ -9,6 +11,7 @@ const projects = [
     description:
       'Modernized a static Pokémon site with Next.js, emphasizing scalable structure, faster performance, and a refreshed UI.',
     tags: ['Next.js', 'UI Rebuild', 'Performance'],
+    image: '/projects/pokemon-preview.svg',
   },
   {
     title: 'Weather Experience',
@@ -16,6 +19,7 @@ const projects = [
     description:
       'Rebuilt a weather app with a modern front-end stack, improving the UX with clearer data hierarchy and responsive layouts.',
     tags: ['Next.js', 'Responsive', 'API UX'],
+    image: '/projects/weather-preview.svg',
   },
 ];
 
@@ -23,14 +27,16 @@ function Projects() {
   return (
     <section id="project" className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col items-center text-center">
-          <p className="chip mb-4">Selected Work</p>
-          <h2 className="section-title">Projects That Showcase Craft</h2>
-          <p className="mt-4 max-w-2xl text-white/70">
-            A curated set of rebuilds and product-focused experiments that
-            highlight modern tooling, clean layout systems, and care for detail.
-          </p>
-        </div>
+        <Reveal>
+          <div className="flex flex-col items-center text-center">
+            <p className="chip mb-4">Selected Work</p>
+            <h2 className="section-title">Projects That Showcase Craft</h2>
+            <p className="mt-4 max-w-2xl text-white/70">
+              A curated set of rebuilds and product-focused experiments that
+              highlight modern tooling, clean layout systems, and care for detail.
+            </p>
+          </div>
+        </Reveal>
 
         <div className="mt-10 grid gap-8 lg:grid-cols-2">
           {projects.map((project, index) => (
@@ -47,12 +53,13 @@ function Projects() {
             >
               <div className="glass-panel rounded-4xl p-6 transition group-hover:-translate-y-1">
                 <div className="overflow-hidden rounded-3xl border border-white/10 bg-white/5">
-                  <iframe
-                    src={project.link}
-                    title={project.title}
-                    className="aspect-video w-full"
-                    loading="lazy"
-                  ></iframe>
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} preview`}
+                    width={1200}
+                    height={720}
+                    className="aspect-video w-full object-cover"
+                  />
                 </div>
                 <div className="mt-6 flex flex-wrap gap-2">
                   {project.tags.map((tag) => (

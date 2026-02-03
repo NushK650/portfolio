@@ -2,11 +2,11 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #0b1f23;
-  --stone: #f5f0e6;
-  --mist: #cfeee3;
-  --sea: #1b6f75;
-  --sun: #f4b259;
+  --ink: #08131e;
+  --stone: #eef2f7;
+  --mist: #d7e3f1;
+  --sea: #1b3b5a;
+  --sun: #7aa9ff;
 }
 
 @theme inline {
@@ -19,9 +19,9 @@
 body {
   min-height: 100%;
   background:
-    radial-gradient(1200px 600px at 10% 10%, rgba(244, 178, 89, 0.18), transparent 60%),
-    radial-gradient(900px 600px at 90% 20%, rgba(27, 111, 117, 0.35), transparent 55%),
-    linear-gradient(140deg, #08161a 0%, #0b1f23 55%, #122a2d 100%);
+    radial-gradient(1200px 600px at 10% 10%, rgba(122, 169, 255, 0.2), transparent 60%),
+    radial-gradient(900px 600px at 90% 20%, rgba(27, 59, 90, 0.45), transparent 55%),
+    linear-gradient(150deg, #06101a 0%, #0a1a2b 55%, #0f2234 100%);
   color: var(--stone);
   font-family: "Space Grotesk", system-ui, sans-serif;
 }
@@ -41,7 +41,7 @@ h1, h2, h3, h4 {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#f4b259] px-6 py-3 text-sm font-semibold text-[#0b1f23] transition hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(244,178,89,0.35)];
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-[#7aa9ff] px-6 py-3 text-sm font-semibold text-[#071726] transition hover:-translate-y-0.5 hover:shadow-[0_18px_40px_rgba(122,169,255,0.35)];
   }
 
   .btn-ghost {

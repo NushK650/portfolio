@@ -1,4 +1,5 @@
 import React from 'react'
+import Reveal from './Reveal'
 
 const Contact = () => {
   const contactIcons = [
@@ -25,7 +26,8 @@ const Contact = () => {
   return (
     <section id="contact" className="py-20">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="glass-panel grid gap-10 rounded-4xl p-8 md:grid-cols-[1.1fr_0.9fr] md:p-12">
+        <Reveal>
+          <div className="glass-panel grid gap-10 rounded-4xl p-8 md:grid-cols-[1.1fr_0.9fr] md:p-12">
           <div>
             <p className="chip mb-4">Contact</p>
             <h2 className="text-3xl font-semibold text-white md:text-4xl">
@@ -78,7 +80,8 @@ const Contact = () => {
               ))}
             </div>
           </div>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

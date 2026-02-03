@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Reveal from "./Reveal";
 import { FaHtml5, FaCss3, FaPython, FaBootstrap, FaNode } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io5";
 import { SiTypescript } from "react-icons/si";
@@ -33,7 +34,8 @@ export default function About() {
     <section id="about" className="py-20">
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="glass-panel rounded-4xl p-8 md:p-10">
+          <Reveal>
+            <div className="glass-panel rounded-4xl p-8 md:p-10">
             <p className="chip mb-6">About me</p>
             <h2 className="text-3xl font-semibold text-white md:text-4xl">
               A builder focused on clarity, polish, and long-term maintainability.
@@ -47,9 +49,11 @@ export default function About() {
               My goal is to create reliable, user-friendly products that feel
               calm and intentional while staying scalable and easy to evolve.
             </p>
-          </div>
+            </div>
+          </Reveal>
 
-          <div className="glass-panel rounded-4xl p-8 md:p-10">
+          <Reveal delay={0.1}>
+            <div className="glass-panel rounded-4xl p-8 md:p-10">
             <p className="chip mb-6">Approach</p>
             <div className="space-y-5 text-white/70">
               <div className="rounded-3xl border border-white/10 bg-white/5 p-4">
@@ -74,11 +78,14 @@ export default function About() {
                 </p>
               </div>
             </div>
-          </div>
+            </div>
+          </Reveal>
         </div>
 
         <div className="mt-16">
-          <h3 className="section-title mb-6">Toolkit</h3>
+          <Reveal>
+            <h3 className="section-title mb-6">Toolkit</h3>
+          </Reveal>
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {skills.map((skill, index) => {
               const Icon = skill.Icon;
